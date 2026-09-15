@@ -8,9 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sync
-        uses: acm-ucr/leetcode-sync@v2
+        uses: joshcai/leetcode-sync@v1.7 # Updated to latest stable version
         with:
           github-token: ${{ github.token }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
           destination-folder: LeetCode-Solutions
+          verbose: true # <-- THIS FORCES LEETCODE NUMBERS AND PERCENTILES
